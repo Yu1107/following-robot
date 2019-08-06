@@ -1,0 +1,17 @@
+<!-- imu_filter_madgwick launch file -->
+<launch>
+
+   <node pkg="openni2_tracker" name="PhoneToPC" type="imu.py" output="screen">
+  </node>
+
+  #### imu_filter_madgwick
+
+  <node pkg="imu_filter_madgwick" type="imu_filter_node"
+      name="imu_filter_node" output="screen">
+    <param name="world_frame" value="nwu"/>
+    <param name="use_mag" value="false"/>
+
+  </node>
+
+
+</launch>

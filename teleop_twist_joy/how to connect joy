@@ -1,0 +1,20 @@
+usb connect joy
+
+>>roscd ps3joy/
+
+>>sudo /usr/sbin/sixpair B8:81:98:69:08:4C
+
+
+
+>>hciconfig
+==================device==================
+hci0:	Type: BR/EDR  Bus: USB
+	BD Address: B8:81:98:69:08:4C  ACL MTU: 1021:5  SCO MTU: 96:6
+	DOWN 
+	RX bytes:1515 acl:0 sco:0 events:119 errors:0
+	TX bytes:9230 acl:0 sco:0 commands:118 errors:0
+
+
+
+
+
