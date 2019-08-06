@@ -1,0 +1,26 @@
+<launch>
+    <include file="$(find x80sv_description)/launch/description.launch"/>
+
+    <rosparam file="$(find drrobot_X80_player)/x80_config.yaml" command="load"/> 	
+	
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <node pkg="drrobot_X80_player" name="drrobot_X80_player_node" type="drrobot_X80_player_node" output="log"/>
+
+
+    <!-- application -->
+    <node pkg="drrobot_X80_player" name="marker_path" type="marker" output="log"/>
+
+    #node pkg="drrobot_X80_player" name="gotogoal" type="gotogoal.py" output="screen"/>
+
+    node pkg="drrobot_X80_player" name="obstacle_avoidence" type="auto_steering_node" output="log"/>
+    
+   <!-- rviz setup -->
+    #node pkg="tf" type="static_transform_publisher" name="base_link_to_trackermarker_tf" args="0 0 0 0 0 0 1 odom trackermarker 10"/>
+    #node pkg="tf" type="static_transform_publisher" name="base_link_to_marker_tf" args="0 0 0 0 0 0 1 odom marker 10"/>
+
+ <!-- navigation -->
+  include file="$(find x80sv_navigation)/launch/fake_move_base_blank_map.launch"/> 
+
+
+</launch>

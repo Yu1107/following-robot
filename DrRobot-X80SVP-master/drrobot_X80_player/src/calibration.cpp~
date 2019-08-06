@@ -1,0 +1,119 @@
+
+#include "ros/ros.h"
+#include "visualization_msgs/Marker.h"
+#include "visualization_msgs/MarkerArray.h"
+#include "geometry_msgs/Point.h"
+#include <tf/transform_broadcaster.h>
+#include <tf/transform_listener.h>
+#include <std_msgs/Bool.h>
+#include <message_filters/subscriber.h>
+#include <message_filters/time_synchronizer.h>
+#include <math.h>
+
+geometry_msgs::Point pdr, wp, oldpdr, oldwp, calibrate, avgpoint;
+std_msgs::Bool kpoint;
+
+int i = 0;
+bool shortok = false;
+
+using namespace std;
+
+class SubAndPub
+{
+public:
+  SubAndPub()
+  {
+    parapub = n.advertise<geometry_msgs::Point>("/parameter_b", 10);
+    calipub = n.advertise<geometry_msgs::Point>("/calibration_b", 10);
+    kinectpub = n.advertise<std_msgs::Bool>("/kinect_point", 10);
+
+    goalsub = n.subscribe("/PDR_position", 1, &SubAndPub::pdrCallback, this);
+    shortsub = n.subscribe("/short_kinect", 5, &SubAndPub::shortCallback, this);
+    wpsub = n.subscribe("/wp", 10, &SubAndPub::wpCallback, this);
+  }
+  void pdrCallback(const geometry_msgs::Point::ConstPtr &pdrmsg);
+  void wpCallback(const geometry_msgs::Point::ConstPtr &wpmsg);
+  void shortCallback(const std_msgs::Bool::ConstPtr &shortmsg);
+
+private:
+  ros::NodeHandle n;
+  ros::Publisher calipub, parapub, kinectpub;
+  ros::Subscriber goalsub, wpsub, shortsub;
+
+  // Frame broadcaster
+  tf::TransformBroadcaster tfBroadcast_;
+};
+
+void SubAndPub::shortCallback(const std_msgs::Bool::ConstPtr &shortmsg)
+{
+
+  shortok = shortmsg->data;
+}
+
+void SubAndPub::pdrCallback(const geometry_msgs::Point::ConstPtr &pdrmsg)
+{
+
+  pdr.x = pdrmsg->x;
+  pdr.y = pdrmsg->y;
+  pdr.z = pdrmsg->z;
+  //ROS_INFO_STREAM("Now PDR " << pdr.x <<", "<< pdr.y <<", "<< pdr.z);
+
+  if (pdr.z == 0)
+  {
+    ROS_INFO_STREAM("PDR_initial_position");
+    oldwp.x = wp.x;
+    oldwp.y = wp.y;
+  }
+  else if (pdr.x != oldpdr.x && shortok != true)
+  {
+    //ROS_INFO_STREAM("Now  old(" << oldwp.x <<", "<< oldwp.y << ")new(" << wp.x << ", " <<wp.y<<")");
+    i = i + 1;
+
+    kpoint.data = true;
+    kinectpub.publish(kpoint);
+
+    //kinect detcet person to odom
+    calibrate.x = sqrt(pow(wp.x - oldwp.x, 2) + pow(wp.y - oldwp.y, 2)); //kinect between two point distance
+    calibrate.y = pdr.z;                                                 //step length
+
+    if (abs(calibrate.x - calibrate.y < 0.4))
+    {
+
+      calibrate.z = calibrate.x - calibrate.y; //kinect and PDR error
+    }
+
+    calipub.publish(calibrate);
+
+    //avgpoint.x = (pdr.x + wp.x) / 2;
+    //avgpoint.y = (pdr.y + wp.y) / 2;
+    avgpoint.x = wp.x;
+    avgpoint.y = wp.y;
+    parapub.publish(avgpoint);
+
+    ROS_INFO_STREAM("step " << i << " ,kinect_z( " << calibrate.x << " ),PDR_z( " << pdr.z << " ),error " << calibrate.z << ").");
+    oldwp.x = wp.x;
+    oldwp.y = wp.y;
+  }
+}
+
+void SubAndPub::wpCallback(const geometry_msgs::Point::ConstPtr &wpmsg)
+{
+  wp.x = wpmsg->x;
+  wp.y = wpmsg->y;
+
+  kpoint.data = false;
+  kinectpub.publish(kpoint);
+  //ROS_INFO_STREAM("Now wp " << wp.x <<", "<< wp.y );
+}
+
+int main(int argc, char **argv)
+{
+  ros::init(argc, argv, "calibration_parameter");
+  cout << "calibrate..." << endl;
+
+  SubAndPub substerAndPubster;
+
+  ros::spin();
+
+  return 0;
+}
