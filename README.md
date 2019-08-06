@@ -1,5 +1,10 @@
 # following-robot
 
+environment:
+NiTE2.2 + openNI2 + ubuntu 14.04
+
+Equipped：
+Kinect v2 + DrRobot x80sv + samsung NOTE2 + WIRELESS ROUTER
 
 ------following robot------
 
