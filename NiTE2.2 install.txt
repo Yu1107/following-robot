@@ -1,0 +1,121 @@
+﻿https://blog.csdn.net/wsr123wsrwsr/article/details/48376805
+
+
+
+
+
+
+
+
+lab5254@5254:~$ cd NiTE-Linux-x64-2.2/
+lab5254@5254:~/NiTE-Linux-x64-2.2$ sudo ./install.sh 
+
+
+拷贝环境变量到.bashrc中
+lab5254@5254:~/NiTE-Linux-x64-2.2$ cat NiTEDevEnvironment >> ~/.bashrc
+
+
+
+
+然后关键的一步，我当时运行UserViewer也是打不开设备，所以才想到这一步的，cd到NiTE-2.0.0/Samples/Bin/下，看到有一个libOpenNI2.so,这是安装包自带的一个当然不行，于是我把OpenNI-Linux-x86-2.2/Redist下的libopenNI.so考过来replace掉原来的那个文件，
+
+
+
+
+
+
+lab5254@5254:~/NiTE-Linux-x64-2.2$ cd Samples/Bin/
+lab5254@5254:~/NiTE-Linux-x64-2.2/Samples/Bin$ ./UserViewer 
+[Info] [Freenect2Impl] enumerating devices...
+[Info] [Freenect2Impl] 7 usb devices connected
+[Info] [Freenect2Impl] found valid Kinect v2 @2:3 with serial 006882465147
+[Info] [Freenect2Impl] found 1 devices
+[Info] [Freenect2DeviceImpl] opening...
+[Info] [Freenect2DeviceImpl] transfer pool sizes rgb: 20*16384 ir: 60*8*33792
+[Info] [Freenect2DeviceImpl] opened
+[Info] [Freenect2DeviceImpl] starting...
+[Info] [Freenect2DeviceImpl] submitting rgb transfers...
+[Info] [Freenect2DeviceImpl] submitting depth transfers...
+[Info] [Freenect2DeviceImpl] started
+[Info] [DepthPacketStreamParser] 18 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.4046ms -> ~39.3629Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [OpenGLDepthPacketProcessor] avg. time: 53.2355ms -> ~18.7845Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.3101ms -> ~39.5099Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.1971ms -> ~39.687Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [OpenGLDepthPacketProcessor] avg. time: 49.5264ms -> ~20.1913Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.0996ms -> ~39.8413Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 24.8232ms -> ~40.2849Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [OpenGLDepthPacketProcessor] avg. time: 49.2065ms -> ~20.3225Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 24.9094ms -> ~40.1455Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.1838ms -> ~39.7081Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [OpenGLDepthPacketProcessor] avg. time: 48.6861ms -> ~20.5398Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.7457ms -> ~38.8415Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.1246ms -> ~39.8016Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [OpenGLDepthPacketProcessor] avg. time: 49.2461ms -> ~20.3062Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.945ms -> ~38.5431Hz
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [DepthPacketStreamParser] 15 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 26.8263ms -> ~37.2768Hz
+[Info] [OpenGLDepthPacketProcessor] avg. time: 53.595ms -> ~18.6584Hz
+[Info] [DepthPacketStreamParser] 31 packets were lost
+[Info] [DepthPacketStreamParser] 17 packets were lost
+[Info] [DepthPacketStreamParser] 16 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 27.3718ms -> ~36.534Hz
+
+
+
+
+show this image
+  
+
+在进到NiTE-2.0.0/Samples/Bin/下跑UserViewer时出现了想要的深度图，在前面移动一下还有Tracking的标签。
+
+  
+
+[Info] [Freenect2DeviceImpl] stopping...
+[Info] [Freenect2DeviceImpl] canceling rgb transfers...
+[Info] [Freenect2DeviceImpl] canceling depth transfers...
+[Info] [Freenect2DeviceImpl] stopped
+[Info] [Freenect2DeviceImpl] closing...
+[Info] [Freenect2DeviceImpl] releasing usb interfaces...
+[Info] [Freenect2DeviceImpl] deallocating usb transfer pools...
+[Info] [Freenect2DeviceImpl] closing usb device...
+[Info] [Freenect2DeviceImpl] closed
+[Info] [Freenect2DeviceImpl] closing...
+[Info] [Freenect2DeviceImpl] already closed, doing nothing
