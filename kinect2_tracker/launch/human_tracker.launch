@@ -1,0 +1,11 @@
+<launch>
+  <node pkg="kinect2_tracker" name="tracker_show" type="human_tracker_show"  output="log"/>	
+    <group ns="kinect_rgb">
+     <rosparam param="disable_pub_plugins">
+       - 'image_transport/compressedDepth'
+       - 'image_transport/theora'
+     </rosparam>
+  </group>	
+	
+
+</launch>

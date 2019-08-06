@@ -1,0 +1,7 @@
+<launch>
+
+	<include file="$(find kinect2_tracker)/launch/tracker.launch"/>
+
+	<include file="$(find drrobot_X80_player)/launch/imu_follower.launch"/>
+
+</launch>
