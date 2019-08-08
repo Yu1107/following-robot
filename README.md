@@ -8,9 +8,10 @@
 
      Kinect v2 + DrRobot x80sv + samsung NOTE2 + WIRELESS ROUTER
 
+
 # following robot
 
-$ roslaunch drrobot_X80_player following.launch
+     $ roslaunch drrobot_X80_player following.launch
 
 
 # PDR
@@ -21,11 +22,11 @@ $ roslaunch drrobot_X80_player following.launch
 
      $ matlab -nodesktop
 
-or
+     or
 
      $ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
 
-2.choose 
+     2.choose 
 
      $ calibrate_PDR
 
@@ -33,7 +34,7 @@ or
 
 
 # joystick connect and setup
-- connect USB port and joystick
+     - connect USB port and joystick
 
      $ roscd ps3joy
 
@@ -45,7 +46,7 @@ or
 
 # veloview
 
-- velodyne lidar
+     - velodyne lidar
 
 
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
@@ -55,12 +56,12 @@ or
 
 # sick
 
-1. check usb port
+     1. check usb port
 
 
      $ lsusb
 
-2. access permissions
+     2. access permissions
 
 
      $ sudo chmod 777 /dev/bus/usb/001/001
