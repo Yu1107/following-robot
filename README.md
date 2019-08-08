@@ -21,6 +21,8 @@
      $ cd Desktop/PDR
 
      $ matlab -nodesktop
+     
+
 
      or
 
@@ -66,3 +68,8 @@
 
 
      $ sudo chmod 777 /dev/bus/usb/001/001
+     
+     
+     3.launch
+     
+     $ roslaunch sick_tim sick_tim551_2050001.launch
