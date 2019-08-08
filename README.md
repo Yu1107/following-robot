@@ -22,8 +22,6 @@
 
      $ matlab -nodesktop
      
-
-
      or
 
      $ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
@@ -49,8 +47,6 @@
 ## veloview
 
      - velodyne lidar
-
-
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
 
 
@@ -59,17 +55,12 @@
 ## sick
 
      1. check usb port
-
-
      $ lsusb
      
 
      2. access permissions
-
-
      $ sudo chmod 777 /dev/bus/usb/001/001
      
      
      3.launch
-     
      $ roslaunch sick_tim sick_tim551_2050001.launch
