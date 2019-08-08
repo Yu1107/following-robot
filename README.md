@@ -35,11 +35,11 @@ or
 # joystick connect and setup
 - connect USB port and joystick
 
-$ roscd ps3joy
+     $ roscd ps3joy
 
-$ sudo /usr/sbin/sixpair
+     $ sudo /usr/sbin/sixpair
 
-$ sudo hciconfig hci0 reset
+     $ sudo hciconfig hci0 reset
 
 
 
@@ -48,7 +48,7 @@ $ sudo hciconfig hci0 reset
 - velodyne lidar
 
 
-$ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
+     $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
 
 
 
@@ -58,9 +58,9 @@ $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
 1. check usb port
 
 
-$ lsusb
+     $ lsusb
 
 2. access permissions
 
 
-$ sudo chmod 777 /dev/bus/usb/001/001
+     $ sudo chmod 777 /dev/bus/usb/001/001
