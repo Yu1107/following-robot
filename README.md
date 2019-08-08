@@ -15,17 +15,21 @@ $ roslaunch drrobot_X80_player following.launch
 
 # PDR
 
-1.open matlab
+     1.open matlab
 
-$ cd Desktop/PDR
-$ matlab -nodesktop
+     $ cd Desktop/PDR
+
+     $ matlab -nodesktop
+
 or
-$ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
+
+     $ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
 
 2.choose 
-$ calibrate_PDR
 
-$ PDR_continuity
+     $ calibrate_PDR
+
+     $ PDR_continuity
 
 
 # joystick connect and setup
