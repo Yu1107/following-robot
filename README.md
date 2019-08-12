@@ -17,14 +17,32 @@
 
 ### kinect skeleton tracking
 
+     1. to path file
      $ cd catkin_ws/src/NiTE-Linux-x64-2.2/Redist/
-
+     
+     2. Run tracking node
      $ rosrun kinect2_tracker human_tracker_show 
 
 
 ### robot
-
+     Run robot node
      $ roslaunch drrobot_X80_player robot.launch
+     
+### IMU
+- app(need to download):Sensorstream IMU+GPS:
+https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
+
+     1.smartphone, pc connect same Wi-Fi
+     
+     2. check ip addr
+     $ ifconfig
+     
+     3. setup app ip and port
+     ip : 192.168.88.106
+     port: 5555
+     
+     4. Run imu node
+     $ roslaunch imu_complementary_filter complementary_filter.launch  
 
 ### PDR
 
