@@ -2,7 +2,7 @@
 
 - environment:
 
-     NiTE2.2 + openNI2 + ubuntu 14.04
+     NiTE2.2 + openNI2 + ubuntu 14.04 + ROS Indigo
 
 
 - Equipped：
@@ -10,11 +10,13 @@
      Kinect v2 + DrRobot x80sv + samsung NOTE3
 
 
-# following robot
+## following robot
+
      Quick demo
      $ roslaunch drrobot_X80_player following.launch
 
 ### kinect skeleton tracking
+
      $ cd catkin_ws/src/NiTE-Linux-x64-2.2/Redist/
 
      $ rosrun kinect2_tracker human_tracker_show 
