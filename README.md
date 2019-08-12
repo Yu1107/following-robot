@@ -10,9 +10,17 @@
      Kinect v2 + DrRobot x80sv + samsung NOTE3
 
 
-## following robot
+# following robot
      Quick demo
      $ roslaunch drrobot_X80_player following.launch
+
+## kinect skeleton tracking
+     $ cd catkin_ws/src/
+
+     $ matlab -nodesktop
+
+
+## robot
 
 
 ## PDR
@@ -34,7 +42,7 @@
      $ PDR_continuity
 
 
-## joystick connect and setup
+### joystick connect and setup
      - connect USB port and joystick
 
      $ roscd ps3joy
@@ -45,7 +53,7 @@
 
 
 
-## veloview
+### veloview
 
      - velodyne lidar
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
@@ -53,7 +61,7 @@
 
 
 
-## sick
+### sick
 
      1. check usb port
      $ lsusb
