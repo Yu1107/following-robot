@@ -29,8 +29,9 @@
      $ roslaunch drrobot_X80_player robot.launch
      
 ### IMU
-- app(need to download):Sensorstream IMU+GPS:
-https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
+- app:
+
+Sensorstream IMU+GPS: https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
      1.smartphone, pc connect same Wi-Fi
      
