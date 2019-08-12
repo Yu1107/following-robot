@@ -4,13 +4,14 @@
 
      NiTE2.2 + openNI2 + ubuntu 14.04
 
+
 - Equipped：
 
-     Kinect v2 + DrRobot x80sv + samsung NOTE3 + Wireless Router
+     Kinect v2 + DrRobot x80sv + samsung NOTE3
 
 
 ## following robot
-
+     Quick demo
      $ roslaunch drrobot_X80_player following.launch
 
 
@@ -26,7 +27,7 @@
 
      $ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
 
-     2.choose 
+     2.choose task
 
      $ calibrate_PDR
 
@@ -62,5 +63,5 @@
      $ sudo chmod 777 /dev/bus/usb/001/001
      
      
-     3.launch
+     3.Run sick node
      $ roslaunch sick_tim sick_tim551_2050001.launch
