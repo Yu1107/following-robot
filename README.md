@@ -57,10 +57,11 @@ Sensorstream IMU+GPS: https://play.google.com/store/apps/details?id=de.lorenz_fe
 
      $ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
 
-     2.choose task
-
+     2.what do u want
+     - online calibrate step length parameter
      $ calibrate_PDR
-
+     
+     - PDR path following
      $ PDR_continuity
 
 ### joystick connect and setup
