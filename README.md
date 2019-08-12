@@ -14,17 +14,17 @@
      Quick demo
      $ roslaunch drrobot_X80_player following.launch
 
-- kinect skeleton tracking
+### kinect skeleton tracking
      $ cd catkin_ws/src/NiTE-Linux-x64-2.2/Redist/
 
      $ rosrun kinect2_tracker human_tracker_show 
 
 
-- robot
+### robot
 
      $ roslaunch drrobot_X80_player robot.launch
 
-- PDR
+### PDR
 
      1.open matlab
 
@@ -42,8 +42,7 @@
 
      $ PDR_continuity
 
-
-- joystick connect and setup
+### joystick connect and setup
      - connect USB port and joystick
 
      $ roscd ps3joy
@@ -54,7 +53,7 @@
 
 
 
-- veloview
+### veloview
 
      - velodyne lidar
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
@@ -62,7 +61,8 @@
 
 
 
-- sick
+
+### sick
 
      1. check usb port
      $ lsusb
