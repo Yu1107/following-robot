@@ -33,10 +33,11 @@ https://github.com/search?q=x80sv
      $ roslaunch drrobot_X80_player robot.launch
      
 ### IMU
-- app: ensorstream IMU+GPS
+app: ensorstream IMU+GPS
 https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
-     1.smartphone, pc connect same Wi-Fi
+
+     1. smartphone, pc connect same Wi-Fi
      
      2. check ip addr
      $ ifconfig
@@ -50,7 +51,7 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
 ### PDR
 
-     1.open matlab
+     1. open matlab
 
      $ cd Desktop/PDR
 
@@ -60,7 +61,7 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
      $ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
 
-     2.what do u want
+     2. what do u want
      
      - online calibrate step length parameter
      $ calibrate_PDR
@@ -69,10 +70,10 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
      $ PDR_continuity
 
 ### joystick connect and setup
-     - connect USB port and joystick
-     
 http://wiki.ros.org/ps3joy/Tutorials/PairingJoystickAndBluetoothDongle
 http://wiki.ros.org/ps3joy
+
+     connect USB port and joystick 
 
      $ roscd ps3joy
 
@@ -104,7 +105,7 @@ https://github.com/uos/sick_tim
      3.Run sick node
      $ roslaunch sick_tim sick_tim551_2050001.launch
 
-#### ref
+## ref
 - [1]  K. Koide and J. Miura, “Identification of a specific person using color, height, and gait features for a person following robot,” Robotics and Autonomous Systems, vol. 84, pp. 76–87, Oct. 2016. 
 - [2]  M. Ota, T. Ogitsu, H. Hisahara, H. Takemura, Y. Ishii, and H. Mizoguchi, “Recovery function for human following robot losing target,” IECON 2013 - 39th Annual Conference of the IEEE Industrial Electronics Society, Nov. 2013.
 - [3]  P. Nikdel, R. Shrestha, and R. Vaughan, “The Hands-Free Push-Cart: Autonomous Following in Front by Predicting User Trajectory Around Obstacles,” 2018 IEEE International Conference on Robotics and Automation (ICRA), May 2018.
