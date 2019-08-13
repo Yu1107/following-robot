@@ -33,9 +33,8 @@ https://github.com/search?q=x80sv
      $ roslaunch drrobot_X80_player robot.launch
      
 ### IMU
-- app:
-
-Sensorstream IMU+GPS: https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
+- app: ensorstream IMU+GPS
+https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
      1.smartphone, pc connect same Wi-Fi
      
@@ -91,7 +90,6 @@ http://wiki.ros.org/ps3joy
 
 
 
-
 ### sick
 https://github.com/uos/sick_tim
 
@@ -105,3 +103,6 @@ https://github.com/uos/sick_tim
      
      3.Run sick node
      $ roslaunch sick_tim sick_tim551_2050001.launch
+
+#### ref
+- 
