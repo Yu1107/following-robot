@@ -16,6 +16,8 @@
      $ roslaunch drrobot_X80_player following.launch
 
 ### kinect skeleton tracking
+https://github.com/wsustcid/openni2_tracker
+https://github.com/mcgi5sr2/kinect2_tracker
 
      1. to path file
      $ cd catkin_ws/src/NiTE-Linux-x64-2.2/Redist/
@@ -25,6 +27,8 @@
 
 
 ### robot
+https://github.com/search?q=x80sv
+
      Run robot node
      $ roslaunch drrobot_X80_player robot.launch
      
@@ -67,6 +71,9 @@ Sensorstream IMU+GPS: https://play.google.com/store/apps/details?id=de.lorenz_fe
 
 ### joystick connect and setup
      - connect USB port and joystick
+     
+http://wiki.ros.org/ps3joy/Tutorials/PairingJoystickAndBluetoothDongle
+http://wiki.ros.org/ps3joy
 
      $ roscd ps3joy
 
@@ -86,6 +93,7 @@ Sensorstream IMU+GPS: https://play.google.com/store/apps/details?id=de.lorenz_fe
 
 
 ### sick
+https://github.com/uos/sick_tim
 
      1. check usb port
      $ lsusb
