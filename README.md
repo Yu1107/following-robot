@@ -33,7 +33,7 @@ https://github.com/search?q=x80sv
      $ roslaunch drrobot_X80_player robot.launch
      
 ### IMU
-app: ensorstream IMU+GPS
+app: sensorstream IMU+GPS
 https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
 
