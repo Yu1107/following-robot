@@ -51,6 +51,6 @@ ROS Buildfarm
 
 # Run
 
-ˋˋˋbash
+```bash
 roslauch sick_tim sick_tim551_2050001.launch
 ˋˋˋ
