@@ -1,4 +1,4 @@
-# Combining human skeleton and pedestrian dead reckoning for research of following robot
+# Human-Following Robot Using Human Skeleton and Pedestrian Dead Reckoning
 
 - environment:
 
