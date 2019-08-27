@@ -63,3 +63,19 @@ References
  [1] http://www.x-io.co.uk/open-source-imu-and-ahrs-algorithms/
 
  [2] http://www.mdpi.com/1424-8220/15/8/19302
+ 
+ 
+ 
+# demo 
+1.  complementary_filter
+
+        $ roslaunch imu_complementary_filter complementary_filter.launch
+
+2.  madgwick
+
+        $ roslaunch imu_filter_madgwick filter_madgwick.launch
+        
+        
+run imu node
+
+        $ rosrun imu_complementary_filter imu.py
