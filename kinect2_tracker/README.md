@@ -21,7 +21,11 @@ To run the program the launch file needs to be used
 ## Run
 
 ```bash
+origin version
 roslaunch kinect2_tracker tracker.launch
+
+our use
+roslaunch kinect2_tracker human_tracker.launch.launch
 ```
 
 ## API
