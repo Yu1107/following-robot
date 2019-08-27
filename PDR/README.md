@@ -1,3 +1,4 @@
+# task
 1.  延續追蹤
 
 PDR_continuity.m
@@ -13,7 +14,8 @@ calibrate_PDR.m
 realtimeros_PDR.m
 
 
-- ros folder
+# ros folder
+
 1.發送topic至ROS
 
 PubMessage.mlx
@@ -29,4 +31,14 @@ ReadBagFile.mlx
 3.接收topic訊息
 
 SubMessage.mlx
+
+
+
+# laserscan processing
+
+處理ros點雲資料
+
+1. sick
+
+2. velodyne
 
