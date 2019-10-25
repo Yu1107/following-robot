@@ -14,6 +14,16 @@
 
      Quick demo
      $ roslaunch drrobot_X80_player following.launch
+     
+     
+     
+     start x80sv robot
+     $ roslaunch drrobot_X80_player robot.launch
+
+
+     keyboard control
+     $ rosrun drrobot_X80_player drrobot_X80_keyboard_teleop_node 
+     
 
 ### kinect skeleton tracking
 https://github.com/wsustcid/openni2_tracker
