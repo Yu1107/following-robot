@@ -11,10 +11,10 @@
      
 
 ## following robot
-Quick demo(kinect + imu + robot)
-
+- Quick demo(kinect + imu + robot)
+```bash
      $ roslaunch drrobot_X80_player following.launch 
-     
+```     
 
 ![Alt text](https://github.com/Yu1107/following-robot/blob/master/system.png)
 
@@ -35,7 +35,7 @@ https://github.com/mcgi5sr2/kinect2_tracker
 ### robot
 https://github.com/search?q=x80sv
 
-Run robot node
+- Run robot node
 ```bash
      $ roslaunch drrobot_X80_player robot.launch
 ```
@@ -90,7 +90,7 @@ http://wiki.ros.org/ps3joy/Tutorials/PairingJoystickAndBluetoothDongle
 http://wiki.ros.org/ps3joy
 
 
-connect USB port and joystick 
+- connect USB port and joystick 
 
 ```bash
      $ roscd ps3joy
