@@ -15,7 +15,8 @@ Quick demo(kinect + imu + robot)
 
      $ roslaunch drrobot_X80_player following.launch 
      
-          
+
+![Alt text](https://github.com/Yu1107/following-robot/blob/master/system.png)
 
 ### kinect skeleton tracking
 https://github.com/wsustcid/openni2_tracker
