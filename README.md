@@ -21,10 +21,12 @@ Quick demo(kinect + imu + robot)
 https://github.com/wsustcid/openni2_tracker
 https://github.com/mcgi5sr2/kinect2_tracker
 
-     1. to path file
+1. to path file
+
      $ cd catkin_ws/src/NiTE-Linux-x64-2.2/Redist/
      
-     2. Run tracking node
+2. Run tracking node
+
      $ rosrun kinect2_tracker human_tracker_show 
 
 
