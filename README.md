@@ -11,8 +11,8 @@
      
 
 ## following robot
+Quick demo(kinect + imu + robot)
 
-     Quick demo(kinect + imu + robot)
      $ roslaunch drrobot_X80_player following.launch 
      
           
