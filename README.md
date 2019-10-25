@@ -19,6 +19,7 @@ Quick demo(kinect + imu + robot)
 
 ### kinect skeleton tracking
 https://github.com/wsustcid/openni2_tracker
+
 https://github.com/mcgi5sr2/kinect2_tracker
 
 1. to path file
@@ -82,7 +83,9 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 ```
 ### joystick connect and setup
 http://wiki.ros.org/ps3joy/Tutorials/PairingJoystickAndBluetoothDongle
+
 http://wiki.ros.org/ps3joy
+
 
 connect USB port and joystick 
 ```bash
@@ -96,7 +99,6 @@ connect USB port and joystick
 
 ### veloview lidar
 
-     $ roscd VeloView*
      
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
 
