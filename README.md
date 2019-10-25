@@ -53,7 +53,9 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
      $ ifconfig
     ``` 
 3. setup app ip and port
+
      ip : 192.168.88.106
+     
      port: 5555
      
 4. Run imu node
@@ -89,6 +91,7 @@ http://wiki.ros.org/ps3joy
 
 
 connect USB port and joystick 
+
 ```bash
      $ roscd ps3joy
 
@@ -99,7 +102,6 @@ connect USB port and joystick
 
 
 ### veloview lidar
-
      
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
 
@@ -108,6 +110,7 @@ connect USB port and joystick
 
 ### sick
 https://github.com/uos/sick_tim
+
 
 1. check usb port
 ```bash
@@ -123,6 +126,3 @@ https://github.com/uos/sick_tim
 ```bash     
      $ roslaunch sick_tim sick_tim551_2050001.launch
 ```
-
-
-![Alt text](https://github.com/Yu1107/following-robot/blob/master/video/Screencast%202019-07-01%2016-43-02(left).mp4)
