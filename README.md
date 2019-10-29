@@ -16,12 +16,12 @@
      $ roslaunch drrobot_X80_player following.launch 
 ```     
 
-![Alt text](https://github.com/Yu1107/following-robot/blob/master/system.png)
+![Alt text](https://github.com/Yu1107/following-robot/blob/master/All_system.png)
 
 ## kinect skeleton tracking
-https://github.com/wsustcid/openni2_tracker
+- https://github.com/wsustcid/openni2_tracker
 
-https://github.com/mcgi5sr2/kinect2_tracker
+- https://github.com/mcgi5sr2/kinect2_tracker
 
 1. to path file
 ```bash
@@ -33,7 +33,7 @@ https://github.com/mcgi5sr2/kinect2_tracker
 ```
 
 ## robot
-https://github.com/search?q=x80sv
+- https://github.com/search?q=x80sv
 
 - Run robot node
 ```bash
@@ -41,9 +41,9 @@ https://github.com/search?q=x80sv
 ```
      
 ## IMU
-app: sensorstream IMU+GPS
+- app: sensorstream IMU+GPS
 
-https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
+- https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
 
 1. smartphone, pc connect same Wi-Fi
@@ -76,7 +76,7 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
 
      $ cd usr/local/MATLAB/R2018b/bin/ && ./matlab
 ```
-2. what do u want(mission)
+2. mission
 ```bash     
      - online calibrate step length parameter
      $ calibrate_PDR
@@ -85,9 +85,9 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
      $ PDR_continuity
 ```
 ## joystick connect and setup
-http://wiki.ros.org/ps3joy/Tutorials/PairingJoystickAndBluetoothDongle
+- http://wiki.ros.org/ps3joy/Tutorials/PairingJoystickAndBluetoothDongle
 
-http://wiki.ros.org/ps3joy
+- http://wiki.ros.org/ps3joy
 
 
 - connect USB port and joystick 
@@ -102,25 +102,25 @@ http://wiki.ros.org/ps3joy
 
 
 ## veloview lidar
+- https://github.com/ros-drivers/velodyne
+
      
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
 
 
-
-
 ## sick
-https://github.com/uos/sick_tim
+- https://github.com/uos/sick_tim
 
 
 1. check usb port
 ```bash
     $ lsusb
- ```    
+```    
 
 2. access permissions
 ```bash
      $ sudo chmod 777 /dev/bus/usb/001/001
- ```    
+```    
      
 3.Run sick node
 ```bash     

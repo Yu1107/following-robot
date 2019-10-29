@@ -1,0 +1,175 @@
+﻿https://blog.csdn.net/seamanj/article/details/78261669
+
+
+sudo apt-get install -y g++ python libusb-1.0-0-dev freeglut3-dev doxygen graphviz
+sudo apt-get install libudev-dev
+
+
+git clone https://github.com/occipital/OpenNI2.git
+cd OpenNI2
+make -j${nproc}
+
+
+make -C ThirdParty/PSCommon/XnLib/Source
+make -C Source/DepthUtils
+make -C Wrappers/java/OpenNI.java
+make[1]: Entering directory `/home/lab5254/OpenNI2/Wrappers/java/OpenNI.java'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Wrappers/java/OpenNI.java'
+make -C Samples/SimpleViewer.java
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/SimpleViewer.java'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/SimpleViewer.java'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/DepthUtils'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/DepthUtils'
+make[1]: Entering directory `/home/lab5254/OpenNI2/ThirdParty/PSCommon/XnLib/Source'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/ThirdParty/PSCommon/XnLib/Source'
+make -C Source/Core
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Core'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Core'
+make -C Source/Drivers/DummyDevice
+make -C Source/Drivers/PS1080
+make -C Source/Drivers/PSLink
+make -C Source/Drivers/OniFile
+make -C Wrappers/java/OpenNI.jni
+make -C Source/Drivers/PS1080/PS1080Console
+make -C Source/Drivers/PSLink/PSLinkConsole
+make -C Source/Tools/NiViewer
+make -C Samples/SimpleRead
+make -C Samples/EventBasedRead
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Drivers/DummyDevice'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Drivers/DummyDevice'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Wrappers/java/OpenNI.jni'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Wrappers/java/OpenNI.jni'
+make -C Samples/MultipleStreamRead
+make -C Samples/MWClosestPoint
+make -C Samples/SimpleViewer
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/SimpleRead'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/SimpleRead'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/MultipleStreamRead'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/MultipleStreamRead'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Drivers/PS1080/PS1080Console'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Drivers/PS1080/PS1080Console'
+make -C Samples/MultiDepthViewer
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/EventBasedRead'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/EventBasedRead'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Tools/NiViewer'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Tools/NiViewer'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/MWClosestPoint'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/MWClosestPoint'
+make -C Samples/MWClosestPointApp
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/MultiDepthViewer'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/MultiDepthViewer'
+make -C Samples/ClosestPointViewer
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/SimpleViewer'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/SimpleViewer'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/MWClosestPointApp'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/MWClosestPointApp'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Drivers/PSLink'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Drivers/PSLink'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Samples/ClosestPointViewer'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Samples/ClosestPointViewer'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Drivers/PSLink/PSLinkConsole'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Drivers/PSLink/PSLinkConsole'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Drivers/OniFile'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Drivers/OniFile'
+make[1]: Entering directory `/home/lab5254/OpenNI2/Source/Drivers/PS1080'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/lab5254/OpenNI2/Source/Drivers/PS1080'
+
+
+
+
+
+
+
+
+
+
+sudo cp -r Include /usr/include/openni2
+sudo cp -r Bin/x64-Release/OpenNI2 /usr/lib/
+sudo cp Bin/x64-Release/libOpenNI2.* /usr/lib/
+
+
+cd Packaging/
+./ReleaseVersion.py x64
+
+
+Creating installer for OpenNI 2.2 x64
+Installer can be found under: Final
+Done
+
+
+
+
+
+
+
+
+
+
+lab5254@5254:~$ cd OpenNI2/Packaging/Final/OpenNI-Linux-x64-2.2/
+lab5254@5254:~/OpenNI2/Packaging/Final/OpenNI-Linux-x64-2.2$ cd Tools/
+lab5254@5254:~/OpenNI2/Packaging/Final/OpenNI-Linux-x64-2.2/Tools$ ./NiViewer 
+[Info] [Freenect2Impl] enumerating devices...
+[Info] [Freenect2Impl] 7 usb devices connected
+[Info] [Freenect2Impl] found valid Kinect v2 @2:2 with serial 006882465147
+[Info] [Freenect2Impl] found 1 devices
+[Info] [Freenect2DeviceImpl] opening...
+[Info] [Freenect2DeviceImpl] transfer pool sizes rgb: 20*16384 ir: 60*8*33792
+[Info] [Freenect2DeviceImpl] opened
+[Info] [Freenect2DeviceImpl] starting...
+[Info] [Freenect2DeviceImpl] submitting rgb transfers...
+[Info] [Freenect2DeviceImpl] submitting depth transfers...
+[Info] [Freenect2DeviceImpl] started
+[Info] [DepthPacketStreamParser] 19 packets were lost
+[Info] [DepthPacketStreamParser] 30 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 26.1721ms -> ~38.2086Hz
+[Info] [DepthPacketStreamParser] 30 packets were lost
+[Info] [DepthPacketStreamParser] 30 packets were lost
+[Info] [OpenGLDepthPacketProcessor] avg. time: 56.9115ms -> ~17.5711Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 25.7292ms -> ~38.8664Hz
+[Info] [DepthPacketStreamParser] 30 packets were lost
+
+
+
+
+show this image
+  
+
+
+
+
+
+
+
+
+[Info] [Freenect2DeviceImpl] stopping...
+[Info] [Freenect2DeviceImpl] canceling rgb transfers...
+[Info] [Freenect2DeviceImpl] canceling depth transfers...
+[Info] [Freenect2DeviceImpl] stopped
+[Info] [Freenect2DeviceImpl] closing...
+[Info] [Freenect2DeviceImpl] releasing usb interfaces...
+[Info] [Freenect2DeviceImpl] deallocating usb transfer pools...
+[Info] [Freenect2DeviceImpl] closing usb device...
+[Info] [Freenect2DeviceImpl] closed
+[Info] [Freenect2DeviceImpl] closing...
+[Info] [Freenect2DeviceImpl] already closed, doing nothing
