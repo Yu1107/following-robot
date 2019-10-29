@@ -18,7 +18,7 @@
 
 ![Alt text](https://github.com/Yu1107/following-robot/blob/master/system.png)
 
-### kinect skeleton tracking
+## kinect skeleton tracking
 https://github.com/wsustcid/openni2_tracker
 
 https://github.com/mcgi5sr2/kinect2_tracker
@@ -32,7 +32,7 @@ https://github.com/mcgi5sr2/kinect2_tracker
      $ rosrun kinect2_tracker human_tracker_show 
 ```
 
-### robot
+## robot
 https://github.com/search?q=x80sv
 
 - Run robot node
@@ -40,7 +40,7 @@ https://github.com/search?q=x80sv
      $ roslaunch drrobot_X80_player robot.launch
 ```
      
-### IMU
+## IMU
 app: sensorstream IMU+GPS
 
 https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
@@ -63,7 +63,7 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
      $ roslaunch imu_complementary_filter complementary_filter.launch  
      ```
 
-### PDR
+## PDR
 
 1. open matlab
 
@@ -84,7 +84,7 @@ https://play.google.com/store/apps/details?id=de.lorenz_fenster.sensorstreamgps
      - PDR path following
      $ PDR_continuity
 ```
-### joystick connect and setup
+## joystick connect and setup
 http://wiki.ros.org/ps3joy/Tutorials/PairingJoystickAndBluetoothDongle
 
 http://wiki.ros.org/ps3joy
@@ -101,14 +101,14 @@ http://wiki.ros.org/ps3joy
 ```
 
 
-### veloview lidar
+## veloview lidar
      
      $ cd VeloView-3.5.0-Linux-64bit/bin && ./VeloView
 
 
 
 
-### sick
+## sick
 https://github.com/uos/sick_tim
 
 
